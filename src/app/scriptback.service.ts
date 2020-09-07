@@ -4,11 +4,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class HttpboisService {
-url="http://localhost/jsgrid/profil/";
+export class ScriptbackService {
+url="http://localhost/jsgrid/script/";
   constructor(private http: HttpClient) { }
   getList(){
   return this.http.get(this.url);
+
   }
 }
-

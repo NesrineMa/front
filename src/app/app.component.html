@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
   <title>Test</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,11 +14,11 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Annuaire des entreprises</a>
+      <a class="navbar-brand" >Annuaire des entreprises</a>
     </div>
     <ul class="nav navbar-nav">
       <li routerLinkActive="active"><a href="#" [routerLink]="['./home']">Home</a></li>
-      <li><a [routerLink]="['./sec1']" href=""  routerLinkActive="active">Secteur Bois</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./sec1']">Secteur Bois</a></li>
     </ul>
   </div>
 </nav>

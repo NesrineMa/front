@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScriptbackService } from './scriptback.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'contacts';
+
+  constructor(private back: ScriptbackService ) { }
+
+  
+
+
+  
+
 }

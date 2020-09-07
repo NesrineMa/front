@@ -9,20 +9,27 @@ import { AppComponent } from './app.component';
 import { Sec1Component } from './sec1/sec1.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
     AppComponent,
     Sec1Component,
-    HomeComponent
+    HomeComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    ScrollingModule,
+    MatProgressSpinnerModule
+    
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

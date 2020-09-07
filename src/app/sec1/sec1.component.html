@@ -1,4 +1,18 @@
 
+<div class="container">
+  <div class="row" >
+    <div class="col-md-4 mx-auto"><button class="btn btn-success" (click)="callfunction()">
+      Refresh database
+    </button></div>
+   
+  </div>
+</div>
+
+<body>
+  <!-- 
+  <div style="width:120px; margin:0 auto;">
+  <mat-spinner class="custom-spinner"   ></mat-spinner>
+</div> -->
 <table mat-table [dataSource]="liste" multiTemplateDataRows>
 
   <ng-container matColumnDef="denomination">
@@ -6,7 +20,7 @@
     <td mat-cell *matCellDef="let element"> {{element.denomination}} </td>
   </ng-container>
 
-
+   
   <ng-container matColumnDef="raison_sociale">
     <th mat-header-cell *matHeaderCellDef> Raison Sociale </th>
     <td mat-cell *matCellDef="let element"> {{element.raison_sociale}} </td>
@@ -72,3 +86,4 @@
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="student-detail-row"></tr>
 
 </table>
+</body>
