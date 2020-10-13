@@ -17,8 +17,27 @@
       <a class="navbar-brand" >Annuaire des entreprises</a>
     </div>
     <ul class="nav navbar-nav">
-      <li routerLinkActive="active"><a href="#" [routerLink]="['./home']">Home</a></li>
-      <li routerLinkActive="active"><a href="" [routerLink]="['./sec1']">Secteur Bois</a></li>
+      <li routerLinkActive="active"><a href="#" [routerLink]="['./home']">Accueil</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./sec1']">Secteur Bois et ameublement</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./agro']">Secteur des agro-alimentaires</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./ceramic']">Secteur céramique et verre</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./mecanique']">Secteur mécaniques et métallurgiques</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./electro']">Secteur électroniques et électroménager</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./chimie']">Secteur chimie</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./textiles']">Secteur textiles et habillement</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./cuir']">Secteur cuir et chaussures</a></li>
+      <li routerLinkActive="active"><a href="" [routerLink]="['./divers']">Industries diverses</a></li>
+      <div class="container">
+        <div class="row" >
+          <div class="col-md-4 mx-auto"><button class="btn btn-success"  (click)="callfunction()">
+            Rafraîchir la base des données
+          </button></div>
+        </div>
+        
+      </div>
+
+
+    
     </ul>
   </div>
 </nav>

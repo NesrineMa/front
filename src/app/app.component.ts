@@ -11,7 +11,32 @@ export class AppComponent {
 
   constructor(private back: ScriptbackService ) { }
 
-  
+
+
+
+
+  status:any;
+  callfunction(): void 
+  {
+   alert("Attention! Cette opération peut durer quelques minutes...")
+
+    this.back.getList().subscribe(
+      (data)=>{
+       this.status=data;
+       if (this.status == true) 
+          {
+              console.log(this.status );
+          }
+
+        else{
+            console.log('No');
+        }   
+              },
+
+      (error)=>{
+        console.log(error);
+      }
+        );  }
 
 
   

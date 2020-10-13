@@ -1,0 +1,80 @@
+
+  <body>
+    <!-- 
+    <div style="width:120px; margin:0 auto;">
+    <mat-spinner class="custom-spinner"   ></mat-spinner>
+  </div> -->
+  <table mat-table [dataSource]="liste" multiTemplateDataRows>
+  
+    <ng-container matColumnDef="denomination">
+      <th mat-header-cell *matHeaderCellDef> Dénomination </th>
+      <td mat-cell *matCellDef="let element"> {{element.denomination}} </td>
+    </ng-container>
+  
+     
+    <ng-container matColumnDef="raison_sociale">
+      <th mat-header-cell *matHeaderCellDef> Raison Sociale </th>
+      <td mat-cell *matCellDef="let element"> {{element.raison_sociale}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="responsable">
+      <th mat-header-cell *matHeaderCellDef> Responsable </th>
+      <td mat-cell *matCellDef="let element"> {{element.responsable}} </td>
+    </ng-container>
+  
+  
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let element">
+        <a mat-button href="javascript:void()" (click)="element.isExpanded = !element.isExpanded">
+          Détails</a>
+      </td>
+    </ng-container>
+  
+  
+    <!-- Template for details row -->
+    <ng-container matColumnDef="expandedDetail">
+      <td mat-cell *matCellDef="let element" [attr.colspan]="displayedStudentsColumnsList.length">
+  
+        <div class="row student-element-detail" [@detailExpand]="element.isExpanded ? 'expanded' : 'collapsed'">
+          <mat-list>
+            <div mat-subheader>
+              <br> <b> E-mail:</b>
+              {{element.email}}
+              <br> <b> URL:</b>
+              {{element.URL}}
+              <br> <b>Fax siège/usine:</b> 
+              {{element.fax_siege_usine}}
+              <br> <b> Télephone siège/usine:</b> 
+              {{element.telephone_siege_usine}}            
+              <br> <b> Activités:</b> 
+              {{element.activites}} 
+              <br> <b> Produits: </b> 
+              {{element.produits}}
+              <br> <b> Adresse usine: </b> 
+              {{element.adresse_usine}}            
+              <br> <b> Gouvernorat:</b> 
+              {{element.gouvernorat}}            
+              <br> <b> Délégation:</b> 
+              {{element.delegation}}            
+              <br> <b> Régime:</b> 
+              {{element.regime}}            
+              <br>       
+            </div>
+  
+          </mat-list>
+        </div>
+  
+      </td>
+    </ng-container>
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedStudentsColumnsList;sticky: true"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedStudentsColumnsList;" class="student-element-row"
+      [class.student-expanded-row]="element.isExpanded"></tr>
+  
+    <!-- Extra row to show detail content column -->
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="student-detail-row"></tr>
+  
+  </table>
+  </body>
